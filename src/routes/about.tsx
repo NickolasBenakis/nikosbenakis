@@ -218,7 +218,26 @@ function About() {
       <FadeIn delay={0.75}>
         <section className="mb-16">
           <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Portfolio
+            My ventures
+          </h2>
+          <div className="flex flex-wrap gap-6 items-center">
+            {ventureLogos.map((item) => (
+              <img
+                key={item.name}
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+                className="h-20 w-auto object-contain"
+              />
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn delay={0.77}>
+        <section className="mb-16">
+          <h2 className="text-2xl font-medium tracking-tight mb-8">
+            Portfolio Investments
           </h2>
           <div className="flex flex-wrap gap-6 items-center">
             {portfolioLogos.map((item) => (
@@ -308,6 +327,11 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 const portfolioLogos = [
   { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
+]
+
+const ventureLogos = [
+  { name: 'Astrocode', logo: '/logos/astrocode.png' },
+  { name: 'Materia Technica', logo: '/logos/materia.png' },
 ]
 
 const projects = [

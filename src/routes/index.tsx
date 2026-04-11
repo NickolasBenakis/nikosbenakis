@@ -22,9 +22,11 @@ function Home() {
                 improve conversion, activation, and retention. I helped rebuild
                 the core product at Workable, scaled Uizard from 6 engineers
                 to acquisition by Miro, and now I work with startups on their
-                tech, product, and growth strategy. I'm also
-                an
-                angel investor in{' '}
+                tech, product, and growth strategy. I'm co-founder of{' '}
+                <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Astrocode</a>,
+                strategic partner at{' '}
+                <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Materia Technica</a>,
+                and angel investor in{' '}
                 <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>,
                 the first AI Legal copilot in Greece.
               </p>
@@ -68,6 +70,25 @@ function Home() {
       </FadeIn>
 
       <FadeIn delay={0.45}>
+        <section className="mb-16">
+          <h2 className="text-2xl font-medium tracking-tight mb-8">
+            My ventures
+          </h2>
+          <div className="flex flex-wrap gap-6 items-center">
+            {ventures.map((item) => (
+              <img
+                key={item.name}
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+                className="h-20 w-auto object-contain"
+              />
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn delay={0.47}>
         <section className="mb-16">
           <h2 className="text-2xl font-medium tracking-tight mb-8">
             Portfolio Investments
@@ -152,6 +173,11 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 const portfolio = [
   { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
+]
+
+const ventures = [
+  { name: 'Astrocode', logo: '/logos/astrocode.png' },
+  { name: 'Materia Technica', logo: '/logos/materia.png' },
 ]
 
 const education = [

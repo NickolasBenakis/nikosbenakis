@@ -56,7 +56,11 @@
       "Bash(curl -sL \"https://www.netcompany.com\")",
       "Bash(curl -sL -o intrasoft_new.png -w \"%{http_code}\" \"https://www.netcompany.com/apple-touch-icon.png\")",
       "WebFetch(domain:dikaio.ai)",
-      "Bash(curl -sL -o dikaio.svg -w \"%{http_code}\" \"https://www.dikaio.ai/assets/images/logo.svg\")"
+      "Bash(curl -sL -o dikaio.svg -w \"%{http_code}\" \"https://www.dikaio.ai/assets/images/logo.svg\")",
+      "Bash(curl -sL -o astrocode.png -w \"%{http_code}\" \"https://www.astrocode.tech/apple-touch-icon.png\")",
+      "Bash(curl -sL -o materia.png -w \"%{http_code}\" \"https://materiatechnica.com/apple-touch-icon.png\")",
+      "WebFetch(domain:www.astrocode.tech)",
+      "WebFetch(domain:materiatechnica.com)"
     ]
   }
 }
