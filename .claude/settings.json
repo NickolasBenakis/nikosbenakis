@@ -54,7 +54,9 @@
       "WebFetch(domain:www.netcompany.com)",
       "Bash(curl -skL -o unipi_new.png -w \"%{http_code}\" \"https://www.unipi.gr/wp-content/uploads/2023/07/logopapei_light.png\")",
       "Bash(curl -sL \"https://www.netcompany.com\")",
-      "Bash(curl -sL -o intrasoft_new.png -w \"%{http_code}\" \"https://www.netcompany.com/apple-touch-icon.png\")"
+      "Bash(curl -sL -o intrasoft_new.png -w \"%{http_code}\" \"https://www.netcompany.com/apple-touch-icon.png\")",
+      "WebFetch(domain:dikaio.ai)",
+      "Bash(curl -sL -o dikaio.svg -w \"%{http_code}\" \"https://www.dikaio.ai/assets/images/logo.svg\")"
     ]
   }
 }

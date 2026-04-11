@@ -5,7 +5,7 @@ export const Route = createFileRoute('/about')({ component: About })
 
 function About() {
   return (
-    <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-6xl mx-auto">
       <header className="mb-16">
         <Link
           to="/"
@@ -196,10 +196,8 @@ function About() {
         </FadeIn>
       </div>
 
-      <hr className="border-border my-14" />
-
       <FadeIn delay={0.7}>
-        <section className="mb-14">
+        <section className="mt-14 mb-16">
           <h2 className="text-2xl font-medium tracking-tight mb-8">
             Along the way
           </h2>
@@ -210,7 +208,7 @@ function About() {
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             ))}
           </div>
@@ -218,23 +216,25 @@ function About() {
       </FadeIn>
 
       <FadeIn delay={0.75}>
-        <section className="mb-14">
+        <section className="mb-16">
           <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Education &amp; Research
+            Portfolio
           </h2>
           <div className="flex flex-wrap gap-6 items-center">
-            {educationLogos.map((item) => (
+            {portfolioLogos.map((item) => (
               <img
                 key={item.name}
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             ))}
           </div>
         </section>
       </FadeIn>
+
+      <hr className="border-border mb-14" />
 
       <FadeIn delay={0.8}>
         <section className="mb-14">
@@ -306,6 +306,10 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   )
 }
 
+const portfolioLogos = [
+  { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
+]
+
 const projects = [
   {
     name: 'cloudflare-images-client',
@@ -332,15 +336,16 @@ const educationLogos = [
 ]
 
 const companyLogos = [
-  { name: 'Intrasoft', logo: '/logos/intrasoft.png' },
-  { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
-  { name: 'EY', logo: '/logos/ey.png' },
-  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
-  { name: 'Workable', logo: '/logos/workable.png' },
-  { name: 'Uizard', logo: '/logos/uizard.png' },
-  { name: 'Miro', logo: '/logos/miro.png' },
-  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
   { name: 'Perspective', logo: '/logos/perspective.png' },
-  { name: 'Futurae', logo: '/logos/futurae.jpg' },
+  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
   { name: 'Arcjet', logo: '/logos/arcjet.png' },
+  { name: 'Futurae', logo: '/logos/futurae.jpg' },
+  { name: 'Miro', logo: '/logos/miro.png' },
+  { name: 'Uizard', logo: '/logos/uizard.png' },
+  { name: 'Workable', logo: '/logos/workable.png' },
+  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
+  { name: 'EY', logo: '/logos/ey.png' },
+  { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
+  { name: 'Intrasoft', logo: '/logos/intrasoft.png' },
+  { name: 'Shell', logo: '/logos/shell.png' },
 ]
