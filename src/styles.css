@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/GeistVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --color-foreground: hsl(191 28% 11%);
+  --color-foreground-muted: hsl(191 28% 11% / 70%);
+  --color-accent: #1b9fd5;
+  --color-border: hsl(0 0% 85%);
+  --color-surface: hsl(0 0% 100%);
+}
+
+/* Text reveal — mask-style slide up for headlines */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+
+/* Fade in — gentle rise for sections */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out both;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background-color: var(--color-surface);
+}
+
+::selection {
+  background-color: var(--color-foreground);
+  color: var(--color-surface);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
