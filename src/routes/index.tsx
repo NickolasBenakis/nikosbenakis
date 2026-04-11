@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { TextReveal } from '#/components/TextReveal'
 import { FadeIn } from '#/components/FadeIn'
 
@@ -6,59 +6,81 @@ export const Route = createFileRoute('/')({ component: Home })
 
 function Home() {
   return (
-    <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-2xl mx-auto">
-      {/* Header */}
+    <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-5xl mx-auto">
       <header className="mb-16">
-        <h1 className="text-2xl font-medium tracking-tight">
+        <h1 className="text-4xl font-medium tracking-[-0.04em]">
           <TextReveal>Nikos Benakis</TextReveal>
         </h1>
       </header>
 
       <hr className="border-border mb-12" />
 
-      {/* Bio */}
       <FadeIn delay={0.3}>
         <section className="mb-14">
-          <p className="text-sm leading-[170%] text-foreground-muted max-w-[480px]">
-            I'm a software engineer and founder focused on AI and product. Over
-            the past decade I've built products at EY, Workable, and Uizard
-            (acquired by Miro), worked alongside great people at Multiplier
-            Holdings, and founded snapcar.gr. Currently building at Ben Labs.
+          <p className="text-lg leading-[170%] text-foreground-muted">
+            Software engineer with ~10 years building products across banking,
+            startups, and my own ventures. I've gone from consulting at{' '}
+            <a href="https://www.ey.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">EY</a> to
+            rebuilding core product at{' '}
+            <a href="https://www.workable.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Workable</a>,
+            to joining{' '}
+            <a href="https://uizard.io/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Uizard</a> as the 6th
+            engineer and growing it until{' '}
+            <a href="https://miro.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Miro</a> acquired us.
+            These days I help startups as a Product Engineer, Growth Advisor,
+            and Fractional CTO.
           </p>
+          <Link
+            to="/about"
+            className="inline-block mt-4 text-base font-medium text-accent hover:underline transition-colors duration-200"
+          >
+            Read my full story
+          </Link>
         </section>
       </FadeIn>
 
-      {/* Work */}
       <FadeIn delay={0.4}>
         <section className="mb-14">
-          <SectionTitle>Work</SectionTitle>
-          <ul className="space-y-3 text-sm list-none p-0 m-0">
-            {work.map((item) => (
-              <li
-                key={item.company}
-                className="flex justify-between items-baseline"
-              >
-                <span>
-                  <span className="font-medium">{item.company}</span>
-                  <span className="text-foreground-muted">
-                    {' — '}
-                    {item.role}
-                  </span>
-                </span>
-                {item.current && (
-                  <span className="text-[11px] text-accent">now</span>
-                )}
-              </li>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">
+            Worked with companies like
+          </h2>
+          <div className="flex flex-wrap gap-6 items-center">
+            {companies.map((item) => (
+              <img
+                key={item.name}
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+                className="h-16 w-auto object-contain"
+              />
             ))}
-          </ul>
+          </div>
         </section>
       </FadeIn>
 
-      {/* Projects */}
+      <FadeIn delay={0.45}>
+        <section className="mb-14">
+          <h2 className="text-2xl font-medium tracking-tight mb-8">
+            Education &amp; Research
+          </h2>
+          <div className="flex flex-wrap gap-6 items-center">
+            {education.map((item) => (
+              <img
+                key={item.name}
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+                className="h-16 w-auto object-contain"
+              />
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
       <FadeIn delay={0.5}>
         <section className="mb-14">
           <SectionTitle>Projects</SectionTitle>
-          <ul className="space-y-3 text-sm list-none p-0 m-0">
+          <ul className="space-y-3 text-base list-none p-0 m-0">
             {projects.map((item) => (
               <li key={item.name}>
                 <a
@@ -70,8 +92,7 @@ function Home() {
                   {item.name}
                 </a>
                 <span className="text-foreground-muted">
-                  {' — '}
-                  {item.description}
+                  , {item.description}
                 </span>
               </li>
             ))}
@@ -79,11 +100,10 @@ function Home() {
         </section>
       </FadeIn>
 
-      {/* Elsewhere */}
       <FadeIn delay={0.6}>
         <section className="mb-14">
           <SectionTitle>Elsewhere</SectionTitle>
-          <div className="flex gap-6 text-sm font-medium">
+          <div className="flex gap-6 text-base font-medium">
             {social.map((item) => (
               <a
                 key={item.label}
@@ -99,10 +119,10 @@ function Home() {
         </section>
       </FadeIn>
 
-      {/* Footer */}
       <FadeIn delay={0.7}>
-        <footer className="pt-12 border-t border-border">
-          <p className="text-xs text-foreground-muted">
+        <footer className="pt-12 border-t border-border flex items-center gap-3">
+          <img src="/favicon.svg" alt="NB" className="w-6 h-6 shrink-0" />
+          <p className="text-sm text-foreground-muted">
             &copy; {new Date().getFullYear()} Nikos Benakis
           </p>
         </footer>
@@ -113,23 +133,29 @@ function Home() {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-[11px] font-semibold tracking-widest uppercase text-foreground-muted mb-6">
+    <h2 className="text-sm font-semibold tracking-widest uppercase text-foreground-muted mb-6">
       {children}
     </h2>
   )
 }
 
-// ——————————————————————————————————————————
-// Data — update these with your real details
-// ——————————————————————————————————————————
+const education = [
+  { name: 'University of West Attica', logo: '/logos/uniwa.png' },
+  { name: 'University of Piraeus', logo: '/logos/unipi.png' },
+]
 
-const work = [
-  { company: 'Ben Labs', role: 'Engineering', current: true },
-  { company: 'Uizard / Miro', role: 'Tech Lead', current: false },
-  { company: 'Multiplier Holdings', role: 'Engineering', current: false },
-  { company: 'Workable', role: 'Software Engineer', current: false },
-  { company: 'EY', role: 'Consultant', current: false },
-  { company: 'snapcar.gr', role: 'Founder', current: false },
+const companies = [
+  { name: 'Intrasoft', logo: '/logos/intrasoft.png' },
+  { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
+  { name: 'EY', logo: '/logos/ey.png' },
+  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
+  { name: 'Workable', logo: '/logos/workable.png' },
+  { name: 'Uizard', logo: '/logos/uizard.png' },
+  { name: 'Miro', logo: '/logos/miro.png' },
+  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
+  { name: 'Perspective', logo: '/logos/perspective.png' },
+  { name: 'Futurae', logo: '/logos/futurae.jpg' },
+  { name: 'Arcjet', logo: '/logos/arcjet.png' },
 ]
 
 const projects = [

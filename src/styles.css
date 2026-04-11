@@ -10,11 +10,11 @@
 
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --color-foreground: hsl(191 28% 11%);
-  --color-foreground-muted: hsl(191 28% 11% / 70%);
-  --color-accent: #1b9fd5;
-  --color-border: hsl(0 0% 85%);
-  --color-surface: hsl(0 0% 100%);
+  --color-foreground: #111111;
+  --color-foreground-muted: #555555;
+  --color-accent: #c4a882;
+  --color-border: #e8e6e1;
+  --color-surface: #fafaf8;
 }
 
 /* Text reveal — mask-style slide up for headlines */
