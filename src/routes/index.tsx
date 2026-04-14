@@ -17,18 +17,11 @@ function Home() {
             </h1>
             <FadeIn delay={0.3}>
               <p className="text-xl leading-[170%] text-foreground-muted italic">
-                Product Engineer, Growth Advisor, and Fractional CTO. I help
-                companies grow faster by designing experiment strategies that
-                improve conversion, activation, and retention. I helped rebuild
-                the core product at Workable, scaled Uizard from 6 engineers
-                to acquisition by Miro, and now I work with startups on their
-                tech, product, and growth strategy. I'm co-founder of{' '}
-                <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Astrocode</a>,
-                strategic partner at{' '}
-                <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Materia Technica</a>,
-                and angel investor in{' '}
-                <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>,
-                the first AI Legal copilot in Greece.
+                I'm currently advising startups as a Product Engineer, Growth Advisor,
+                and Fractional CTO. I also partner with{' '}
+                <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Materia Technica</a>{' '}
+                and angel invest in AI startups like{' '}
+                <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
               </p>
               <Link
                 to="/about"
@@ -111,24 +104,56 @@ function Home() {
 
       <FadeIn delay={0.5}>
         <section className="mb-14">
-          <SectionTitle>Projects</SectionTitle>
-          <ul className="space-y-3 text-base list-none p-0 m-0">
-            {projects.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium hover:text-accent transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-                <span className="text-foreground-muted">
-                  , {item.description}
-                </span>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">
+            Who am I?
+          </h2>
+          <div className="space-y-5 text-base leading-[170%] text-foreground-muted">
+            <p>Hi, I'm Nikos 👋</p>
+            <p>
+              I'm a Product Engineer, Growth Advisor, and Fractional CTO based
+              in Athens. I co-founded{' '}
+              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>{' '}
+              with Vasilis Drosatos, partner with{' '}
+              <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Materia Technica</a>,
+              and angel invest in early-stage AI startups like{' '}
+              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
+            </p>
+            <p>
+              Over the past decade, I've worked across banking, consulting, and
+              startups. I started in enterprise at EY and Fiserv, rebuilt the
+              core ATS at Workable, and joined Uizard as the 6th engineer
+              before Miro acquired us.
+            </p>
+            <p className="font-medium text-foreground">Highlights:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                Scaled Uizard from 6 engineers to acquisition by Miro, growing
+                from platform full-stack engineer into Growth Tech Lead
               </li>
-            ))}
-          </ul>
+              <li>
+                Rebuilt the core ATS experience at Workable, used by thousands
+                of recruiters daily
+              </li>
+              <li>
+                Designed experiment strategies that moved conversion,
+                activation, and retention for early and growth-stage startups
+              </li>
+              <li>
+                Founded and built multiple ventures, from travel marketplaces
+                to car leasing platforms to consultancy firms
+              </li>
+            </ul>
+            <p>
+              I advise startups (seed to Series B) on product, engineering, and
+              growth, and work hands-on as a Fractional CTO when teams need
+              someone in the trenches.
+            </p>
+            <p>
+              Drop me a line to chat about building AI products, growth
+              experimentation, scaling engineering teams, or anything else
+              you're working on.
+            </p>
+          </div>
         </section>
       </FadeIn>
 
@@ -197,19 +222,6 @@ const companies = [
   { name: 'EY', logo: '/logos/ey.png' },
   { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
   { name: 'Shell', logo: '/logos/shell.png' },
-]
-
-const projects = [
-  {
-    name: 'cloudflare-images-client',
-    description: 'Cloudflare Images API wrapper',
-    url: 'https://github.com/NickolasBenakis/cloudflare-images-client',
-  },
-  {
-    name: 'secure-pdf-chat',
-    description: 'AI-powered PDF conversations',
-    url: 'https://github.com/NickolasBenakis/secure-pdf-chat',
-  },
 ]
 
 const social = [

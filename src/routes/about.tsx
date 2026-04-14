@@ -196,87 +196,7 @@ function About() {
         </FadeIn>
       </div>
 
-      <FadeIn delay={0.7}>
-        <section className="mt-14 mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Along the way
-          </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {companyLogos.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                className="h-20 w-auto object-contain"
-              />
-            ))}
-          </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn delay={0.75}>
-        <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            My ventures
-          </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {ventureLogos.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                className="h-20 w-auto object-contain"
-              />
-            ))}
-          </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn delay={0.77}>
-        <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Portfolio Investments
-          </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {portfolioLogos.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                className="h-20 w-auto object-contain"
-              />
-            ))}
-          </div>
-        </section>
-      </FadeIn>
-
-      <hr className="border-border mb-14" />
-
-      <FadeIn delay={0.8}>
-        <section className="mb-14">
-          <SectionTitle>Projects</SectionTitle>
-          <ul className="space-y-3 text-base list-none p-0 m-0">
-            {projects.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium hover:text-accent transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-                <span className="text-foreground-muted">
-                  , {item.description}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </FadeIn>
+      <hr className="border-border my-14" />
 
       <FadeIn delay={0.9}>
         <section className="mb-14">
@@ -325,28 +245,6 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   )
 }
 
-const portfolioLogos = [
-  { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
-]
-
-const ventureLogos = [
-  { name: 'Astrocode', logo: '/logos/astrocode.png' },
-  { name: 'Materia Technica', logo: '/logos/materia.png' },
-]
-
-const projects = [
-  {
-    name: 'cloudflare-images-client',
-    description: 'Cloudflare Images API wrapper',
-    url: 'https://github.com/NickolasBenakis/cloudflare-images-client',
-  },
-  {
-    name: 'secure-pdf-chat',
-    description: 'AI-powered PDF conversations',
-    url: 'https://github.com/NickolasBenakis/secure-pdf-chat',
-  },
-]
-
 const social = [
   { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
   { label: 'X', url: 'https://x.com/nickolasbenakis' },
@@ -354,22 +252,3 @@ const social = [
   { label: 'Email', url: 'mailto:hello@nikosbenakis.com' },
 ]
 
-const educationLogos = [
-  { name: 'University of West Attica', logo: '/logos/uniwa.png' },
-  { name: 'University of Piraeus', logo: '/logos/unipi.png' },
-]
-
-const companyLogos = [
-  { name: 'Perspective', logo: '/logos/perspective.png' },
-  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
-  { name: 'Arcjet', logo: '/logos/arcjet.png' },
-  { name: 'Futurae', logo: '/logos/futurae.jpg' },
-  { name: 'Miro', logo: '/logos/miro.png' },
-  { name: 'Uizard', logo: '/logos/uizard.png' },
-  { name: 'Workable', logo: '/logos/workable.png' },
-  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
-  { name: 'EY', logo: '/logos/ey.png' },
-  { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
-  { name: 'Intrasoft', logo: '/logos/intrasoft.png' },
-  { name: 'Shell', logo: '/logos/shell.png' },
-]
