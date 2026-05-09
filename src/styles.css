@@ -19,14 +19,8 @@
 
 /* Text reveal — mask-style slide up for headlines */
 @keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
 }
 
 .animate-reveal {
@@ -35,14 +29,8 @@
 
 /* Fade in — gentle rise for sections */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
 }
 
 .animate-fadeIn {
