@@ -30,7 +30,7 @@
 }
 
 .animate-reveal {
-  animation: reveal 0.8s cubic-bezier(0.7, 0, 0.3, 1) both;
+  animation: reveal 0.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
 }
 
 /* Fade in — gentle rise for sections */
@@ -46,7 +46,17 @@
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out both;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Respect reduced motion — show content immediately, no animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal,
+  .animate-fadeIn {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Global styles */

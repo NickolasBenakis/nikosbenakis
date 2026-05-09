@@ -35,6 +35,9 @@ function Home() {
               <img
                 src="/profile.JPEG"
                 alt="Nikos Benakis"
+                width={288}
+                height={384}
+                fetchPriority="high"
                 className="w-56 h-72 lg:w-72 lg:h-96 object-cover object-[center_25%] rounded-lg shadow-xl"
               />
             </div>
@@ -54,6 +57,7 @@ function Home() {
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
+                loading="lazy"
                 className="h-20 w-auto object-contain"
               />
             ))}
@@ -73,6 +77,7 @@ function Home() {
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
+                loading="lazy"
                 className="h-20 w-auto object-contain"
               />
             ))}
@@ -92,6 +97,7 @@ function Home() {
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
+                loading="lazy"
                 className="h-10 w-auto object-contain"
               />
             ))}
@@ -212,8 +218,5 @@ const companies = [
 const social = [
   { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
   { label: 'X', url: 'https://x.com/nickolasbenakis' },
-  // TODO: update with your real LinkedIn URL
-  { label: 'LinkedIn', url: 'https://linkedin.com/in/' },
-  // TODO: update with your real email
-  { label: 'Email', url: 'mailto:hello@nikosbenakis.com' },
+  { label: 'Email', url: 'mailto:nickolasbenele@gmail.com' },
 ]
