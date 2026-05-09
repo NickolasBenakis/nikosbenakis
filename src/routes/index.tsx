@@ -32,14 +32,17 @@ function Home() {
           </div>
           <FadeIn delay={0.2}>
             <div className="shrink-0">
-              <img
-                src="/profile.JPEG"
-                alt="Nikos Benakis"
-                width={288}
-                height={384}
-                fetchPriority="high"
-                className="w-56 h-72 lg:w-72 lg:h-96 object-cover object-[center_25%] rounded-lg shadow-xl"
-              />
+              <picture>
+                <source srcSet="/profile.webp" type="image/webp" />
+                <img
+                  src="/profile.JPEG"
+                  alt="Nikos Benakis"
+                  width={288}
+                  height={384}
+                  fetchPriority="high"
+                  className="w-56 h-72 lg:w-72 lg:h-96 object-cover object-[center_25%] rounded-lg shadow-xl"
+                />
+              </picture>
             </div>
           </FadeIn>
         </div>
