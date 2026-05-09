@@ -17,8 +17,7 @@ function Home() {
             </h1>
             <FadeIn delay={0.3}>
               <p className="text-xl leading-[170%] text-foreground-muted italic">
-                I'm currently advising startups as a Product Engineer, Growth Advisor,
-                and Fractional CTO. I also partner with{' '}
+                I'm currently advising startups as a fractional CTO, product engineer, and growth advisor. I also partner with{' '}
                 <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Materia Technica</a>{' '}
                 and angel invest in AI startups like{' '}
                 <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
@@ -65,10 +64,10 @@ function Home() {
       <FadeIn delay={0.45}>
         <section className="mb-16">
           <h2 className="text-2xl font-medium tracking-tight mb-8">
-            My ventures
+            My initiatives
           </h2>
           <div className="flex flex-wrap gap-6 items-center">
-            {ventures.map((item) => (
+            {initiatives.map((item) => (
               <img
                 key={item.name}
                 src={item.logo}
@@ -93,7 +92,7 @@ function Home() {
                 src={item.logo}
                 alt={item.name}
                 title={item.name}
-                className="h-20 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
             ))}
           </div>
@@ -112,37 +111,23 @@ function Home() {
             <p>
               I'm a Product Engineer, Growth Advisor, and Fractional CTO based
               in Athens. I co-founded{' '}
-              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>{' '}
-              with Vasilis Drosatos, partner with{' '}
+              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>,
+              partner with{' '}
               <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Materia Technica</a>,
               and angel invest in early-stage AI startups like{' '}
               <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
             </p>
             <p>
               Over the past decade, I've worked across banking, consulting, and
-              startups. I started in enterprise at EY and Fiserv, rebuilt the
-              core ATS at Workable, and joined Uizard as the 6th engineer
-              before Miro acquired us.
+              startups — enterprise at EY and Fiserv, core product at Workable,
+              Uizard from the sixth engineer until Miro acquired us, and along
+              the way with{' '}
+              <a href="https://www.perspective.co/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Perspective</a>,{' '}
+              <a href="https://www.futurae.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Futurae</a>,{' '}
+              <a href="https://www.multiplierholdings.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Multiplier Holdings</a>{' '}
+              as AI Tech Advisor, and{' '}
+              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
             </p>
-            <p className="font-medium text-foreground">Highlights:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                Scaled Uizard from 6 engineers to acquisition by Miro, growing
-                from platform full-stack engineer into Growth Tech Lead
-              </li>
-              <li>
-                Rebuilt the core ATS experience at Workable, used by thousands
-                of recruiters daily
-              </li>
-              <li>
-                Designed experiment strategies that moved conversion,
-                activation, and retention for early and growth-stage startups
-              </li>
-              <li>
-                Founded and built multiple ventures, from travel marketplaces
-                to car leasing platforms to consultancy firms
-              </li>
-            </ul>
             <p>
               I advise startups (seed to Series B) on product, engineering, and
               growth, and work hands-on as a Fractional CTO when teams need
@@ -200,7 +185,7 @@ const portfolio = [
   { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
 ]
 
-const ventures = [
+const initiatives = [
   { name: 'Astrocode', logo: '/logos/astrocode.png' },
   { name: 'Materia Technica', logo: '/logos/materia.png' },
 ]
