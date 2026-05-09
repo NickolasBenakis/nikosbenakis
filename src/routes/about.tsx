@@ -31,8 +31,7 @@ function About() {
               >
                 University of West Attica
               </a>
-              , then did my Masters in Advanced Informatics and Computing
-              Systems (Software Development and Artificial Intelligence) at the{' '}
+              , then did a Masters in Software Development and AI at the{' '}
               <a
                 href="https://www.unipi.gr/unipi/en/"
                 target="_blank"
@@ -41,7 +40,7 @@ function About() {
               >
                 University of Piraeus
               </a>
-              . While still in school I interned at{' '}
+              . While still a student I interned at{' '}
               <a
                 href="https://www.intrasoftintl.com/"
                 target="_blank"
@@ -50,7 +49,7 @@ function About() {
               >
                 Intrasoft
               </a>{' '}
-              as an electrical engineer, working on the{' '}
+              as an electrical engineer, working on{' '}
               <a
                 href="https://ruralconnect.gr/"
                 target="_blank"
@@ -58,12 +57,11 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Rural Connect
-              </a>{' '}
-              project. That's where I first got a taste of building something
-              real.
+              </a>
+              . First time I got to build something real.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              From there I moved into banking and consulting at{' '}
+              After that, banking and consulting at{' '}
               <a
                 href="https://www.ey.com/"
                 target="_blank"
@@ -81,12 +79,10 @@ function About() {
               >
                 Fiserv
               </a>.
-              Big companies, slow processes, serious stakes. I learned a lot
-              about how businesses actually work, how decisions get made, and
-              what it takes to ship something inside a large organization. It
-              was solid ground, but after a while I realized I wanted to be
-              closer to the product. I wanted to build things people would
-              actually touch and use every day.
+              Big organizations, deliberate processes. I learned how decisions
+              actually get made at scale, and how long it takes to ship
+              something when everyone has a say. Valuable, but not where I
+              wanted to stay.
             </p>
           </section>
         </FadeIn>
@@ -95,7 +91,7 @@ function About() {
           <section>
             <ChapterTitle>Finding my stride</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              So I moved into the startup world.{' '}
+              So I made the move into startups.{' '}
               <a
                 href="https://www.workable.com/"
                 target="_blank"
@@ -104,12 +100,10 @@ function About() {
               >
                 Workable
               </a>{' '}
-              was where things clicked for me. I stayed there long enough to
-              not just contribute, but to own and recreate the core ATS
-              experience, the part of the product that thousands of recruiters
-              use daily. That's where I learned what it means to really care
-              about a product section, to fight for the details that matter to
-              actual users.
+              is where things clicked. I stayed long enough to own and rebuild
+              the core ATS experience, the part thousands of recruiters use
+              every day. That's where I got what it means to really care about
+              a product, to fight for the details that users actually notice.
             </p>
           </section>
         </FadeIn>
@@ -118,7 +112,7 @@ function About() {
           <section>
             <ChapterTitle>The startup ride</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              Then I joined{' '}
+              Then{' '}
               <a
                 href="https://uizard.io/"
                 target="_blank"
@@ -126,13 +120,22 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Uizard
-              </a>{' '}
-              as the 6th engineer. That one changed everything. I got to
-              experience the entire startup lifecycle firsthand. I started as a
-              platform full-stack engineer, eventually grew into the Growth
-              Tech Lead role, and went through all of it: the pivots, the late
-              nights, the small wins that keep you going, and the big ones that
-              make it all worth it. The ride ended when{' '}
+              </a>
+              , as the 6th engineer. That one was different. I came in as a
+              full-stack engineer, grew into the Growth Tech Lead role, and
+              lived through the whole thing: the pivots, the pressure, and the
+              wins. One of the biggest was shipping{' '}
+              <a
+                href="https://www.producthunt.com/products/uizard/launches/uizard-autodesigner"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Autodesigner
+              </a>
+              , an AI feature that turns text prompts into UI designs. It blew
+              up on Product Hunt and became one of the defining moments of the
+              company. Not long after, we were acquired by{' '}
               <a
                 href="https://miro.com/"
                 target="_blank"
@@ -140,8 +143,8 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Miro
-              </a>{' '}
-              acquired us.
+              </a>
+              . Hard to summarize. Worth every bit of it.
             </p>
           </section>
         </FadeIn>
@@ -150,16 +153,39 @@ function About() {
           <section>
             <ChapterTitle>Going independent</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              After that, I started doing my own thing. Today I work as a
-              freelance Product Engineer, Growth Engineering Advisor, and
-              Fractional CTO. I help startups figure out their tech and product
-              direction, the same way people helped me figure out mine when I
-              was starting out.
+              After Miro, I went independent. Today I work as a Product
+              Engineer, Growth Advisor, and Fractional CTO. Mostly helping
+              startups work out their tech and product direction. Over the
+              years that's brought me to{' '}
+              <a
+                href="https://www.perspective.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Perspective
+              </a>,{' '}
+              <a
+                href="https://www.futurae.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Futurae
+              </a>,{' '}
+              <a
+                href="https://www.multiplierholdings.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Multiplier Holdings
+              </a>,
+              and others, working on product, growth, and AI.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              I've also tried to build my own products along the way.{' '}
-              <strong className="text-foreground font-medium">Coyova</strong>{' '}
-              was a traveling marketplace.{' '}
+              Along the way I tried building my own things too. <strong className="text-foreground font-medium">Coyova</strong>{' '}
+              was a travel marketplace.{' '}
               <a
                 href="https://snapcar.gr/"
                 target="_blank"
@@ -168,9 +194,47 @@ function About() {
               >
                 snapcar.gr
               </a>{' '}
-              was a car leasing platform. Not all of them worked out, and
-              that's fine. Every one of them taught me something I wouldn't
-              have learned otherwise.
+              was a car leasing platform. Neither is active now, but both were
+              worth doing.
+            </p>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              Right now I co-run{' '}
+              <a
+                href="https://www.astrocode.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Astrocode
+              </a>
+              , a software agency that helps companies and startups move faster
+              with AI. We work on EU-funded projects, build internal tools, and
+              help teams ship more without growing the team.
+            </p>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              I'm also involved with{' '}
+              <a
+                href="https://materiatechnica.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Materia Technica
+              </a>
+              , which is building AI tools to improve how pharmacies operate
+              and how people with long-term health conditions manage their care.
+            </p>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              On top of that, I angel invest in early-stage AI startups.{' '}
+              <a
+                href="https://dikaio.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Dikaio.ai
+              </a>{' '}
+              is one I'm particularly excited about.
             </p>
           </section>
         </FadeIn>
@@ -179,18 +243,16 @@ function About() {
           <section>
             <ChapterTitle>What keeps me going</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              Honestly? Curiosity. I just like understanding how things work,
-              whether that's a new technology, a business model, or why a team
-              operates the way it does. I love learning new things and I don't
-              think that ever goes away.
+              Curiosity, mostly. I like figuring out how things work, whether
+              that's a new technology, a business model, or a team that's
+              somehow shipping faster than it should be. That part hasn't
+              changed since I started.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              But the thing I care about most is people. In a world where AI
-              keeps getting more capable, I think the stuff that really matters
-              is the human stuff: listening well, building trust, being someone
-              others enjoy working with. The best work I've done has always
-              come from teams where people genuinely liked being in the room
-              together. That's what I look for, and it's what I try to bring.
+              The other thing is people. The best work I've been part of came
+              from teams where people actually wanted to be there. That's what
+              I look for when I take on new work, and it's what I try to bring
+              to the teams I work with.
             </p>
           </section>
         </FadeIn>
