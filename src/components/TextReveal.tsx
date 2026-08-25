@@ -4,11 +4,7 @@ interface TextRevealProps {
   className?: string
 }
 
-export function TextReveal({
-  children,
-  delay = 0,
-  className = '',
-}: TextRevealProps) {
+export function TextReveal({ children, delay = 0, className = '' }: TextRevealProps) {
   return (
     <span className="inline-block overflow-hidden">
       <span

@@ -18,8 +18,17 @@ function Home() {
             </h1>
             <FadeIn delay={0.3}>
               <p className="text-xl leading-[170%] text-foreground-muted italic">
-                I'm currently advising startups as a fractional CTO, product engineer, and growth advisor. I also angel invest in AI startups like{' '}
-                <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
+                I'm currently advising startups as a fractional CTO, product engineer, and growth
+                advisor. I also angel invest in AI startups like{' '}
+                <a
+                  href="https://dikaio.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200"
+                >
+                  Dikaio.ai
+                </a>
+                .
               </p>
               <Link
                 to="/about"
@@ -49,27 +58,21 @@ function Home() {
 
       <FadeIn delay={0.4}>
         <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Worked with companies like
-          </h2>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">Worked with companies like</h2>
           <LogoGrid items={companies} />
         </section>
       </FadeIn>
 
       <FadeIn delay={0.45}>
         <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            My initiatives
-          </h2>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">My initiatives</h2>
           <LogoGrid items={initiatives} />
         </section>
       </FadeIn>
 
       <FadeIn delay={0.47}>
         <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Portfolio Investments
-          </h2>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">Portfolio Investments</h2>
           <LogoGrid items={portfolio} />
         </section>
       </FadeIn>
@@ -78,41 +81,97 @@ function Home() {
 
       <FadeIn delay={0.5}>
         <section className="mb-14">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">
-            Who am I?
-          </h2>
+          <h2 className="text-2xl font-medium tracking-tight mb-8">Who am I?</h2>
           <div className="space-y-5 text-base leading-[170%] text-foreground-muted">
             <p>Hi, I'm Nikos 👋</p>
             <p>
-              I'm a Product Engineer, Growth Advisor, and Fractional CTO based
-              in Athens. I co-founded{' '}
-              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>{' '}
+              I'm a Product Engineer, Growth Advisor, and Fractional CTO based in Athens. I
+              co-founded{' '}
+              <a
+                href="https://www.astrocode.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Astrocode
+              </a>{' '}
               and angel invest in early-stage AI startups like{' '}
-              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
+              <a
+                href="https://dikaio.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Dikaio.ai
+              </a>
+              .
             </p>
             <p>
-              Over the past decade, I've worked across banking, consulting, and
-              startups — enterprise at EY and Fiserv, core product at Workable,
-              Uizard from the sixth engineer until Miro acquired us, and along
-              the way with{' '}
-              <a href="https://www.perspective.co/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Perspective</a>,{' '}
-              <a href="https://www.futurae.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Futurae</a>,{' '}
-              <a href="https://www.multiplierholdings.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Multiplier Holdings</a>{' '}
+              Over the past decade, I've worked across banking, consulting, and startups —
+              enterprise at EY and Fiserv, core product at Workable, Uizard from the sixth engineer
+              until Miro acquired us, and along the way with{' '}
+              <a
+                href="https://www.perspective.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Perspective
+              </a>
+              ,{' '}
+              <a
+                href="https://www.futurae.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Futurae
+              </a>
+              ,{' '}
+              <a
+                href="https://www.multiplierholdings.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Multiplier Holdings
+              </a>{' '}
               as AI Tech Advisor,{' '}
-              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>, and{' '}
-              <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Materia Labs</a>,
-              where I led{' '}
-              <a href="https://materiatechnica.com/en/instapharm" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">InstaPharm</a>.
+              <a
+                href="https://dikaio.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Dikaio.ai
+              </a>
+              , and{' '}
+              <a
+                href="https://materiatechnica.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Materia Labs
+              </a>
+              , where I led{' '}
+              <a
+                href="https://materiatechnica.com/en/instapharm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                InstaPharm
+              </a>
+              .
             </p>
             <p>
-              I advise startups (seed to Series B) on product, engineering, and
-              growth, and work hands-on as a Fractional CTO when teams need
-              someone in the trenches.
+              I advise startups (seed to Series B) on product, engineering, and growth, and work
+              hands-on as a Fractional CTO when teams need someone in the trenches.
             </p>
             <p>
-              Drop me a line to chat about building AI products, growth
-              experimentation, scaling engineering teams, or anything else
-              you're working on.
+              Drop me a line to chat about building AI products, growth experimentation, scaling
+              engineering teams, or anything else you're working on.
             </p>
           </div>
         </section>
@@ -157,13 +216,9 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   )
 }
 
-const portfolio = [
-  { name: 'Dikaio.ai', logo: '/logos/dikaio.svg' },
-]
+const portfolio = [{ name: 'Dikaio.ai', logo: '/logos/dikaio.svg' }]
 
-const initiatives = [
-  { name: 'Astrocode', logo: '/logos/astrocode.png' },
-]
+const initiatives = [{ name: 'Astrocode', logo: '/logos/astrocode.png' }]
 
 const education = [
   { name: 'University of West Attica', logo: '/logos/uniwa.png' },

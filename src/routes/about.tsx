@@ -78,11 +78,10 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Fiserv
-              </a>.
-              Big organizations, deliberate processes. I learned how decisions
-              actually get made at scale, and how long it takes to ship
-              something when everyone has a say. Valuable, but not where I
-              wanted to stay.
+              </a>
+              . Big organizations, deliberate processes. I learned how decisions actually get made
+              at scale, and how long it takes to ship something when everyone has a say. Valuable,
+              but not where I wanted to stay.
             </p>
           </section>
         </FadeIn>
@@ -100,10 +99,10 @@ function About() {
               >
                 Workable
               </a>{' '}
-              is where things clicked. I stayed long enough to own and rebuild
-              the core ATS experience, the part thousands of recruiters use
-              every day. That's where I got what it means to really care about
-              a product, to fight for the details that users actually notice.
+              is where things clicked. I stayed long enough to own and rebuild the core ATS
+              experience, the part thousands of recruiters use every day. That's where I got what it
+              means to really care about a product, to fight for the details that users actually
+              notice.
             </p>
           </section>
         </FadeIn>
@@ -121,10 +120,9 @@ function About() {
               >
                 Uizard
               </a>
-              , as the 6th engineer. That one was different. I came in as a
-              full-stack engineer, grew into the Growth Tech Lead role, and
-              lived through the whole thing: the pivots, the pressure, and the
-              wins. One of the biggest was shipping{' '}
+              , as the 6th engineer. That one was different. I came in as a full-stack engineer,
+              grew into the Growth Tech Lead role, and lived through the whole thing: the pivots,
+              the pressure, and the wins. One of the biggest was shipping{' '}
               <a
                 href="https://www.producthunt.com/products/uizard/launches/uizard-autodesigner"
                 target="_blank"
@@ -133,9 +131,9 @@ function About() {
               >
                 Autodesigner
               </a>
-              , an AI feature that turns text prompts into UI designs. It blew
-              up on Product Hunt and became one of the defining moments of the
-              company. Not long after, we were acquired by{' '}
+              , an AI feature that turns text prompts into UI designs. It blew up on Product Hunt
+              and became one of the defining moments of the company. Not long after, we were
+              acquired by{' '}
               <a
                 href="https://miro.com/"
                 target="_blank"
@@ -153,10 +151,9 @@ function About() {
           <section>
             <ChapterTitle>Going independent</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              After Miro, I went independent. Today I work as a Product
-              Engineer, Growth Advisor, and Fractional CTO. Mostly helping
-              startups work out their tech and product direction. Over the
-              years that's brought me to{' '}
+              After Miro, I went independent. Today I work as a Product Engineer, Growth Advisor,
+              and Fractional CTO. Mostly helping startups work out their tech and product direction.
+              Over the years that's brought me to{' '}
               <a
                 href="https://www.perspective.co/"
                 target="_blank"
@@ -164,7 +161,8 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Perspective
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="https://www.futurae.com/"
                 target="_blank"
@@ -172,7 +170,8 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Futurae
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="https://www.multiplierholdings.com/"
                 target="_blank"
@@ -180,7 +179,8 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Multiplier Holdings
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="https://materiatechnica.com/"
                 target="_blank"
@@ -188,8 +188,8 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Materia Labs
-              </a>,
-              and others, working on product, growth, and AI. At Materia Labs I led{' '}
+              </a>
+              , and others, working on product, growth, and AI. At Materia Labs I led{' '}
               <a
                 href="https://materiatechnica.com/en/instapharm"
                 target="_blank"
@@ -198,12 +198,13 @@ function About() {
               >
                 InstaPharm
               </a>
-              , an AI product built to improve how pharmacies operate and how
-              people with long-term health conditions manage their care.
+              , an AI product built to improve how pharmacies operate and how people with long-term
+              health conditions manage their care.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              Along the way I tried building my own things too. <strong className="text-foreground font-medium">Coyova</strong>{' '}
-              was a travel marketplace.{' '}
+              Along the way I tried building my own things too.{' '}
+              <strong className="text-foreground font-medium">Coyova</strong> was a travel
+              marketplace.{' '}
               <a
                 href="https://snapcar.gr/"
                 target="_blank"
@@ -212,8 +213,7 @@ function About() {
               >
                 snapcar.gr
               </a>{' '}
-              was a car leasing platform. Neither is active now, but both were
-              worth doing.
+              was a car leasing platform. Neither is active now, but both were worth doing.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
               Right now I co-run{' '}
@@ -225,9 +225,9 @@ function About() {
               >
                 Astrocode
               </a>
-              , a software agency that helps companies and startups move faster
-              with AI. We work on EU-funded projects, build internal tools, and
-              help teams ship more without growing the team.
+              , a software agency that helps companies and startups move faster with AI. We work on
+              EU-funded projects, build internal tools, and help teams ship more without growing the
+              team.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
               On top of that, I angel invest in early-stage AI startups.{' '}
@@ -248,46 +248,40 @@ function About() {
           <section>
             <ChapterTitle>What keeps me going</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
-              Curiosity, mostly. I like figuring out how things work, whether
-              that's a new technology, a business model, or a team that's
-              somehow shipping faster than it should be. That part hasn't
-              changed since I started.
+              Curiosity, mostly. I like figuring out how things work, whether that's a new
+              technology, a business model, or a team that's somehow shipping faster than it should
+              be. That part hasn't changed since I started.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              The other thing is people, and honestly that's the bigger half.
-              The hard parts of the projects I remember were rarely technical.
-              More often it was a room of five or six people who all wanted
-              the same outcome, stuck for weeks, because everyone was carrying
+              The other thing is people, and honestly that's the bigger half. The hard parts of the
+              projects I remember were rarely technical. More often it was a room of five or six
+              people who all wanted the same outcome, stuck for weeks, because everyone was carrying
               a worry nobody had said out loud yet.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              Chris Voss has a name for the way out of that: tactical empathy.
-              It sounds colder than it is. It mostly means getting curious
-              about the person in front of you before you get attached to being
-              right. I don't always manage it. But the teams I've loved working
-              with were never the ones that agreed the most. They were the ones
-              where you could say the uncomfortable thing out loud and nobody
-              took it personally.
+              Chris Voss has a name for the way out of that: tactical empathy. It sounds colder than
+              it is. It mostly means getting curious about the person in front of you before you get
+              attached to being right. I don't always manage it. But the teams I've loved working
+              with were never the ones that agreed the most. They were the ones where you could say
+              the uncomfortable thing out loud and nobody took it personally.
             </p>
             <blockquote className="border-l-2 border-accent pl-5 my-6">
               <p className="text-base leading-[170%] text-foreground italic">
-                “If you want to go fast, go alone. If you want to go far, go
-                together.”
+                “If you want to go fast, go alone. If you want to go far, go together.”
               </p>
             </blockquote>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              And it was never really about the destination. Morgan Housel
-              writes that the real luxury isn't money, it's getting to choose
-              what you spend your days on and who you spend them with. That
-              second part is the one I keep coming back to. Launches blur
-              together after a while. What I remember is a specific night with
-              a specific person, both of us tired, laughing at something
-              completely broken, somehow sure we'd have it working by morning.
+              And it was never really about the destination. Morgan Housel writes that the real
+              luxury isn't money, it's getting to choose what you spend your days on and who you
+              spend them with. That second part is the one I keep coming back to. Launches blur
+              together after a while. What I remember is a specific night with a specific person,
+              both of us tired, laughing at something completely broken, somehow sure we'd have it
+              working by morning.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              So when I start working with a new team, that's the part I pay
-              attention to. Good people, learning from each other, enjoying the
-              thing while we build it. The rest usually follows.
+              So when I start working with a new team, that's the part I pay attention to. Good
+              people, learning from each other, enjoying the thing while we build it. The rest
+              usually follows.
             </p>
           </section>
         </FadeIn>
@@ -348,4 +342,3 @@ const social = [
   { label: 'LinkedIn', url: 'https://linkedin.com/in/' },
   { label: 'Email', url: 'mailto:hello@nikosbenakis.com' },
 ]
-

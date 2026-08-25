@@ -12,11 +12,17 @@ export const Route = createRootRoute({
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://www.nikosbenakis.com' },
       { property: 'og:title', content: 'Nikos Benakis' },
-      { property: 'og:description', content: 'Software engineer and founder focused on AI and product.' },
+      {
+        property: 'og:description',
+        content: 'Software engineer and founder focused on AI and product.',
+      },
       { property: 'og:image', content: 'https://www.nikosbenakis.com/profile.JPEG' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'Nikos Benakis' },
-      { name: 'twitter:description', content: 'Software engineer and founder focused on AI and product.' },
+      {
+        name: 'twitter:description',
+        content: 'Software engineer and founder focused on AI and product.',
+      },
       { name: 'twitter:image', content: 'https://www.nikosbenakis.com/profile.JPEG' },
     ],
     links: [
