@@ -42,14 +42,14 @@ function About() {
               </a>
               . While still a student I interned at{' '}
               <a
-                href="https://www.intrasoftintl.com/"
+                href="https://netcompany.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
-                Intrasoft
+                Netcompany
               </a>{' '}
-              as an electrical engineer, working on{' '}
+              (Intrasoft at the time) as an electrical engineer, working on{' '}
               <a
                 href="https://ruralconnect.gr/"
                 target="_blank"

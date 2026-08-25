@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { TextReveal } from '#/components/TextReveal'
 import { FadeIn } from '#/components/FadeIn'
+import { LogoGrid } from '#/components/LogoGrid'
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -51,18 +52,7 @@ function Home() {
           <h2 className="text-2xl font-medium tracking-tight mb-8">
             Worked with companies like
           </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {companies.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                loading="lazy"
-                className="h-20 w-auto object-contain"
-              />
-            ))}
-          </div>
+          <LogoGrid items={companies} />
         </section>
       </FadeIn>
 
@@ -71,18 +61,7 @@ function Home() {
           <h2 className="text-2xl font-medium tracking-tight mb-8">
             My initiatives
           </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {initiatives.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                loading="lazy"
-                className="h-20 w-auto object-contain"
-              />
-            ))}
-          </div>
+          <LogoGrid items={initiatives} />
         </section>
       </FadeIn>
 
@@ -91,18 +70,7 @@ function Home() {
           <h2 className="text-2xl font-medium tracking-tight mb-8">
             Portfolio Investments
           </h2>
-          <div className="flex flex-wrap gap-6 items-center">
-            {portfolio.map((item) => (
-              <img
-                key={item.name}
-                src={item.logo}
-                alt={item.name}
-                title={item.name}
-                loading="lazy"
-                className="h-10 w-auto object-contain"
-              />
-            ))}
-          </div>
+          <LogoGrid items={portfolio} />
         </section>
       </FadeIn>
 
@@ -213,7 +181,7 @@ const companies = [
   { name: 'Workable', logo: '/logos/workable.png' },
   { name: 'Fiserv', logo: '/logos/fiserv.svg' },
   { name: 'EY', logo: '/logos/ey.png' },
-  { name: 'Rural Connect', logo: '/logos/ruralconnect.png' },
+  { name: 'Netcompany', logo: '/logos/netcompany.png' },
   { name: 'Shell', logo: '/logos/shell.png' },
 ]
 
