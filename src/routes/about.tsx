@@ -180,8 +180,26 @@ function About() {
                 className="text-foreground font-medium hover:text-accent transition-colors duration-200"
               >
                 Multiplier Holdings
+              </a>,{' '}
+              <a
+                href="https://materiatechnica.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                Materia Labs
               </a>,
-              and others, working on product, growth, and AI.
+              and others, working on product, growth, and AI. At Materia Labs I led{' '}
+              <a
+                href="https://materiatechnica.com/en/instapharm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
+              >
+                InstaPharm
+              </a>
+              , an AI product built to improve how pharmacies operate and how
+              people with long-term health conditions manage their care.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
               Along the way I tried building my own things too. <strong className="text-foreground font-medium">Coyova</strong>{' '}
@@ -212,19 +230,6 @@ function About() {
               help teams ship more without growing the team.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              I'm also involved with{' '}
-              <a
-                href="https://materiatechnica.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Materia Technica
-              </a>
-              , which is building AI tools to improve how pharmacies operate
-              and how people with long-term health conditions manage their care.
-            </p>
-            <p className="text-base leading-[170%] text-foreground-muted mt-4">
               On top of that, I angel invest in early-stage AI startups.{' '}
               <a
                 href="https://dikaio.ai"
@@ -249,10 +254,40 @@ function About() {
               changed since I started.
             </p>
             <p className="text-base leading-[170%] text-foreground-muted mt-4">
-              The other thing is people. The best work I've been part of came
-              from teams where people actually wanted to be there. That's what
-              I look for when I take on new work, and it's what I try to bring
-              to the teams I work with.
+              The other thing is people, and honestly that's the bigger half.
+              The hard parts of the projects I remember were rarely technical.
+              More often it was a room of five or six people who all wanted
+              the same outcome, stuck for weeks, because everyone was carrying
+              a worry nobody had said out loud yet.
+            </p>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              Chris Voss has a name for the way out of that: tactical empathy.
+              It sounds colder than it is. It mostly means getting curious
+              about the person in front of you before you get attached to being
+              right. I don't always manage it. But the teams I've loved working
+              with were never the ones that agreed the most. They were the ones
+              where you could say the uncomfortable thing out loud and nobody
+              took it personally.
+            </p>
+            <blockquote className="border-l-2 border-accent pl-5 my-6">
+              <p className="text-base leading-[170%] text-foreground italic">
+                “If you want to go fast, go alone. If you want to go far, go
+                together.”
+              </p>
+            </blockquote>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              And it was never really about the destination. Morgan Housel
+              writes that the real luxury isn't money, it's getting to choose
+              what you spend your days on and who you spend them with. That
+              second part is the one I keep coming back to. Launches blur
+              together after a while. What I remember is a specific night with
+              a specific person, both of us tired, laughing at something
+              completely broken, somehow sure we'd have it working by morning.
+            </p>
+            <p className="text-base leading-[170%] text-foreground-muted mt-4">
+              So when I start working with a new team, that's the part I pay
+              attention to. Good people, learning from each other, enjoying the
+              thing while we build it. The rest usually follows.
             </p>
           </section>
         </FadeIn>

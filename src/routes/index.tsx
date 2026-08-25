@@ -17,9 +17,7 @@ function Home() {
             </h1>
             <FadeIn delay={0.3}>
               <p className="text-xl leading-[170%] text-foreground-muted italic">
-                I'm currently advising startups as a fractional CTO, product engineer, and growth advisor. I also partner with{' '}
-                <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Materia Technica</a>{' '}
-                and angel invest in AI startups like{' '}
+                I'm currently advising startups as a fractional CTO, product engineer, and growth advisor. I also angel invest in AI startups like{' '}
                 <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
               </p>
               <Link
@@ -120,9 +118,7 @@ function Home() {
             <p>
               I'm a Product Engineer, Growth Advisor, and Fractional CTO based
               in Athens. I co-founded{' '}
-              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>,
-              partner with{' '}
-              <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Materia Technica</a>,
+              <a href="https://www.astrocode.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Astrocode</a>{' '}
               and angel invest in early-stage AI startups like{' '}
               <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
             </p>
@@ -134,8 +130,11 @@ function Home() {
               <a href="https://www.perspective.co/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Perspective</a>,{' '}
               <a href="https://www.futurae.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Futurae</a>,{' '}
               <a href="https://www.multiplierholdings.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Multiplier Holdings</a>{' '}
-              as AI Tech Advisor, and{' '}
-              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>.
+              as AI Tech Advisor,{' '}
+              <a href="https://dikaio.ai" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Dikaio.ai</a>, and{' '}
+              <a href="https://materiatechnica.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">Materia Labs</a>,
+              where I led{' '}
+              <a href="https://materiatechnica.com/en/instapharm" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-200">InstaPharm</a>.
             </p>
             <p>
               I advise startups (seed to Series B) on product, engineering, and
@@ -196,7 +195,6 @@ const portfolio = [
 
 const initiatives = [
   { name: 'Astrocode', logo: '/logos/astrocode.png' },
-  { name: 'Materia Technica', logo: '/logos/materia.png' },
 ]
 
 const education = [
@@ -205,6 +203,7 @@ const education = [
 ]
 
 const companies = [
+  { name: 'Materia Labs', logo: '/logos/materia.png' },
   { name: 'Perspective', logo: '/logos/perspective.png' },
   { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
   { name: 'Arcjet', logo: '/logos/arcjet.png' },
