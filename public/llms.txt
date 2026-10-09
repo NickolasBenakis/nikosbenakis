@@ -1,0 +1,17 @@
+# Nikos Benakis
+
+> Nikos Benakis is a Product Engineer, Growth Advisor, and Fractional CTO based in Athens, Greece. He co-founded Astrocode, a software agency that helps companies and startups move faster with AI, and angel invests in early-stage AI startups like Dikaio.ai.
+
+## Background
+
+- ~10 years across banking, consulting, and startups: EY, Fiserv, Workable (core ATS product), and Uizard (6th engineer, later Growth Tech Lead; shipped the AI feature Autodesigner) until its acquisition by Miro.
+- Independent advisor and Fractional CTO to startups (seed to Series B) including Perspective, Futurae, Multiplier Holdings (AI Tech Advisor), Dikaio.ai, and Materia Labs, where he led InstaPharm.
+- Studied Electrical and Electronics Engineering at the University of West Attica and holds a Masters in Software Development and AI from the University of Piraeus.
+
+## Links
+
+- [Website](https://www.nikosbenakis.com/)
+- [About / full story](https://www.nikosbenakis.com/about)
+- [GitHub](https://github.com/NickolasBenakis)
+- [X](https://x.com/nickolasbenakis)
+- [Astrocode](https://www.astrocode.tech/)

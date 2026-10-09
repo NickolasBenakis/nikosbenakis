@@ -1,7 +1,13 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { FadeIn } from '#/components/FadeIn'
 
-export const Route = createFileRoute('/about')({ component: About })
+export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [{ title: 'About | Nikos Benakis' }],
+    links: [{ rel: 'canonical', href: 'https://www.nikosbenakis.com/about' }],
+  }),
+  component: About,
+})
 
 function About() {
   return (
