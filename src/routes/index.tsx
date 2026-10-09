@@ -3,7 +3,10 @@ import { TextReveal } from '#/components/TextReveal'
 import { FadeIn } from '#/components/FadeIn'
 import { LogoGrid } from '#/components/LogoGrid'
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute('/')({
+  head: () => ({ links: [{ rel: 'canonical', href: 'https://www.nikosbenakis.com/' }] }),
+  component: Home,
+})
 
 function Home() {
   return (

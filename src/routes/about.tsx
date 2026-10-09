@@ -1,7 +1,13 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { FadeIn } from '#/components/FadeIn'
 
-export const Route = createFileRoute('/about')({ component: About })
+export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [{ title: 'About | Nikos Benakis' }],
+    links: [{ rel: 'canonical', href: 'https://www.nikosbenakis.com/about' }],
+  }),
+  component: About,
+})
 
 function About() {
   return (
@@ -339,6 +345,5 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 const social = [
   { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
   { label: 'X', url: 'https://x.com/nickolasbenakis' },
-  { label: 'LinkedIn', url: 'https://linkedin.com/in/' },
-  { label: 'Email', url: 'mailto:hello@nikosbenakis.com' },
+  { label: 'Email', url: 'mailto:nickolasbenele@gmail.com' },
 ]
