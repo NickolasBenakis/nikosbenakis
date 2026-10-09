@@ -10,6 +10,8 @@
 - Website: https://www.nikosbenakis.com/
 - GitHub: https://github.com/NickolasBenakis
 - X: https://x.com/nickolasbenakis
+- dev.to (articles): https://dev.to/nickolasbenakis
+- Case studies: https://www.nikosbenakis.com/work
 - Contact: nickolasbenele@gmail.com
 
 ## Education
@@ -55,6 +57,12 @@ Miro, Uizard, Workable, Multiplier Holdings, Perspective, Futurae, Arcjet, Mater
 ## How he works
 
 Nikos cares most about the people side of building products: curiosity, tactical empathy, and teams where people can say the uncomfortable thing out loud. He looks for good people, learning from each other, and enjoying the work while building it.
+
+## Services
+
+- Fractional CTO: hands-on technical leadership for seed to Series B teams
+- AI product engineering: from prototype to production
+- Growth advisory: experiment design and product growth loops
 
 ## Topics to contact him about
 

@@ -1,4 +1,4 @@
-import { createRootRoute, HeadContent, Scripts } from '@tanstack/react-router'
+import { createRootRoute, HeadContent, Link, Scripts } from '@tanstack/react-router'
 import { DEFAULT_DESCRIPTION, PERSON_ID, SITE_URL, WEBSITE_ID } from '#/lib/seo'
 import appCss from '../styles.css?url'
 
@@ -30,7 +30,15 @@ const jsonLd = {
         'Startup advising',
         'TypeScript',
       ],
-      sameAs: ['https://github.com/NickolasBenakis', 'https://x.com/nickolasbenakis'],
+      sameAs: [
+        'https://github.com/NickolasBenakis',
+        'https://x.com/nickolasbenakis',
+        'https://dev.to/nickolasbenakis',
+      ],
+      makesOffer: ['Fractional CTO', 'AI product engineering', 'Growth advisory'].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name, provider: { '@id': PERSON_ID } },
+      })),
     },
     {
       '@type': 'WebSite',
@@ -83,6 +91,7 @@ export const Route = createRootRoute({
     scripts: [{ type: 'application/ld+json', children: JSON.stringify(jsonLd) }],
   }),
   shellComponent: RootDocument,
+  notFoundComponent: NotFound,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -96,5 +105,29 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+  )
+}
+
+function NotFound() {
+  return (
+    <main className="min-h-screen px-6 py-12 sm:px-8 lg:px-24 lg:py-20 max-w-6xl mx-auto flex flex-col justify-center">
+      <title>Page not found — Nikos Benakis</title>
+      <meta name="robots" content="noindex" />
+      <p className="text-sm tabular-nums text-accent mb-4">404</p>
+      <h1 className="text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25] mb-6">
+        This page doesn't exist.
+      </h1>
+      <p className="text-lg text-foreground-muted mb-8">
+        It may have moved, or the link was mistyped.
+      </p>
+      <div className="flex gap-6 text-base font-medium">
+        <Link to="/" className="text-accent">
+          ← Home
+        </Link>
+        <Link to="/work" className="hover:text-accent transition-colors duration-200">
+          Selected work
+        </Link>
+      </div>
+    </main>
   )
 }

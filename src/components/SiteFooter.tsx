@@ -1,6 +1,7 @@
 const social = [
   { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
   { label: 'X', url: 'https://x.com/nickolasbenakis' },
+  { label: 'dev.to', url: 'https://dev.to/nickolasbenakis' },
   { label: 'Email', url: 'mailto:nickolasbenele@gmail.com' },
 ]
 

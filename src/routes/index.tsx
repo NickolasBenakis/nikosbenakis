@@ -2,8 +2,11 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { FadeIn } from '#/components/FadeIn'
 import { LogoRow } from '#/components/LogoRow'
 import { SiteFooter } from '#/components/SiteFooter'
+import { SiteHeader } from '#/components/SiteHeader'
 import { TextLink } from '#/components/TextLink'
 import { TextReveal } from '#/components/TextReveal'
+import { WorkWithMe } from '#/components/WorkWithMe'
+import { caseStudies } from '#/content/caseStudies'
 import { DEFAULT_DESCRIPTION, pageHead } from '#/lib/seo'
 
 export const Route = createFileRoute('/')({
@@ -19,7 +22,8 @@ export const Route = createFileRoute('/')({
 function Home() {
   return (
     <main className="min-h-screen px-6 py-12 sm:px-8 lg:px-24 lg:py-20 max-w-6xl mx-auto">
-      <header className="mb-20">
+      <SiteHeader />
+      <section aria-label="Introduction" className="mb-20">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
           <div className="lg:max-w-[55%]">
             <h1 className="text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25] mb-6 lg:mb-8">
@@ -64,7 +68,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       <section className="mb-16">
         <FadeIn delay={0.7}>
@@ -72,6 +76,44 @@ function Home() {
         </FadeIn>
         <LogoRow items={companies} delay={0.8} />
       </section>
+
+      <FadeIn onScroll>
+        <section className="mb-16">
+          <div className="flex items-baseline justify-between gap-6">
+            <SectionTitle>Selected work</SectionTitle>
+            <Link
+              to="/work"
+              className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-200 mb-6"
+            >
+              All case studies →
+            </Link>
+          </div>
+          <ul className="border-t border-border">
+            {caseStudies.map((study) => (
+              <li key={study.slug} className="border-b border-border">
+                <Link
+                  to="/work/$slug"
+                  params={{ slug: study.slug }}
+                  className="group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6"
+                >
+                  <span className="flex items-baseline gap-2 text-lg font-medium transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-1">
+                    {study.title}
+                    <span
+                      aria-hidden="true"
+                      className="text-accent opacity-0 -translate-x-1 transition duration-500 ease-[var(--ease-out-expo)] group-hover:opacity-100 group-hover:translate-x-0"
+                    >
+                      →
+                    </span>
+                  </span>
+                  <span className="text-sm sm:text-base text-foreground-muted">
+                    {study.company}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </FadeIn>
 
       <FadeIn onScroll>
         <section className="mb-16">
@@ -122,6 +164,8 @@ function Home() {
           </div>
         </section>
       </FadeIn>
+
+      <WorkWithMe />
 
       <FadeIn onScroll>
         <SiteFooter />
