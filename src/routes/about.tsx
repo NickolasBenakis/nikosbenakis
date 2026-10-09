@@ -345,6 +345,5 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 const social = [
   { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
   { label: 'X', url: 'https://x.com/nickolasbenakis' },
-  { label: 'LinkedIn', url: 'https://linkedin.com/in/' },
-  { label: 'Email', url: 'mailto:hello@nikosbenakis.com' },
+  { label: 'Email', url: 'mailto:nickolasbenele@gmail.com' },
 ]
