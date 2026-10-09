@@ -1,176 +1,119 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { TextReveal } from '#/components/TextReveal'
 import { FadeIn } from '#/components/FadeIn'
-import { LogoGrid } from '#/components/LogoGrid'
+import { LogoRow } from '#/components/LogoRow'
+import { SiteFooter } from '#/components/SiteFooter'
+import { TextLink } from '#/components/TextLink'
+import { TextReveal } from '#/components/TextReveal'
+import { DEFAULT_DESCRIPTION, pageHead } from '#/lib/seo'
 
 export const Route = createFileRoute('/')({
-  head: () => ({ links: [{ rel: 'canonical', href: 'https://www.nikosbenakis.com/' }] }),
+  head: () =>
+    pageHead({
+      title: 'Nikos Benakis — Product Engineer & Fractional CTO, Athens',
+      description: DEFAULT_DESCRIPTION,
+      path: '/',
+    }),
   component: Home,
 })
 
 function Home() {
   return (
-    <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-6xl mx-auto">
-      <header className="mb-16">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+    <main className="min-h-screen px-6 py-12 sm:px-8 lg:px-24 lg:py-20 max-w-6xl mx-auto">
+      <header className="mb-20">
+        <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
           <div className="lg:max-w-[55%]">
-            <h1 className="text-4xl font-medium tracking-[-0.04em] leading-[1.3] mb-8">
-              <TextReveal>
-                Hi, I'm Nikos. I build AI products and grow startups through experimentation.
-              </TextReveal>
+            <h1 className="text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25] mb-6 lg:mb-8">
+              <TextReveal text="Hi, I'm Nikos Benakis. I build AI products and grow startups through experimentation." />
             </h1>
-            <FadeIn delay={0.3}>
-              <p className="text-xl leading-[170%] text-foreground-muted italic">
-                I'm currently advising startups as a fractional CTO, product engineer, and growth
-                advisor. I also angel invest in AI startups like{' '}
-                <a
-                  href="https://dikaio.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground font-medium not-italic hover:text-accent transition-colors duration-200"
-                >
-                  Dikaio.ai
-                </a>
-                .
+            <FadeIn delay={0.45}>
+              <p className="text-lg sm:text-xl leading-[165%] text-foreground-muted">
+                I advise startups as a fractional CTO, product engineer, and growth advisor. I also
+                angel invest in AI startups like{' '}
+                <TextLink href="https://dikaio.ai">Dikaio.ai</TextLink>.
               </p>
               <Link
                 to="/about"
-                className="inline-block mt-6 text-base font-medium text-accent hover:underline transition-colors duration-200"
+                className="group inline-flex items-center gap-1.5 mt-6 text-base font-medium text-accent"
               >
                 Read my full story
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </Link>
             </FadeIn>
           </div>
-          <FadeIn delay={0.2}>
-            <div className="shrink-0">
+          <div className="shrink-0">
+            <div
+              className="animate-fadeIn inline-block rounded-lg shadow-lg overflow-hidden"
+              style={{ animationDelay: '0.3s' }}
+            >
               <picture>
                 <source srcSet="/profile.webp" type="image/webp" />
                 <img
                   src="/profile.JPEG"
-                  alt="Nikos Benakis"
+                  alt="Portrait of Nikos Benakis"
                   width={288}
                   height={384}
                   fetchPriority="high"
-                  className="w-56 h-72 lg:w-72 lg:h-96 object-cover object-[center_25%] rounded-lg shadow-xl"
+                  className="block w-28 h-36 sm:w-40 sm:h-52 lg:w-72 lg:h-96 object-cover object-[center_25%]"
                 />
               </picture>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </header>
 
-      <FadeIn delay={0.4}>
+      <section className="mb-16">
+        <FadeIn delay={0.7}>
+          <SectionTitle>Worked with</SectionTitle>
+        </FadeIn>
+        <LogoRow items={companies} delay={0.8} />
+      </section>
+
+      <FadeIn onScroll>
         <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">Worked with companies like</h2>
-          <LogoGrid items={companies} />
+          <SectionTitle>Ventures</SectionTitle>
+          <ul className="border-t border-border">
+            {ventures.map((venture) => (
+              <li key={venture.name} className="border-b border-border">
+                <a
+                  href={venture.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline justify-between gap-6 py-5"
+                >
+                  <span className="flex items-baseline gap-2 text-lg font-medium transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-1">
+                    {venture.name}
+                    <span
+                      aria-hidden="true"
+                      className="text-accent opacity-0 -translate-x-1 transition duration-500 ease-[var(--ease-out-expo)] group-hover:opacity-100 group-hover:translate-x-0"
+                    >
+                      ↗
+                    </span>
+                  </span>
+                  <span className="text-sm sm:text-base text-foreground-muted text-right">
+                    {venture.role}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       </FadeIn>
 
-      <FadeIn delay={0.45}>
+      <FadeIn onScroll>
         <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">My initiatives</h2>
-          <LogoGrid items={initiatives} />
-        </section>
-      </FadeIn>
-
-      <FadeIn delay={0.47}>
-        <section className="mb-16">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">Portfolio Investments</h2>
-          <LogoGrid items={portfolio} />
-        </section>
-      </FadeIn>
-
-      <hr className="border-border mb-14" />
-
-      <FadeIn delay={0.5}>
-        <section className="mb-14">
-          <h2 className="text-2xl font-medium tracking-tight mb-8">Who am I?</h2>
-          <div className="space-y-5 text-base leading-[170%] text-foreground-muted">
-            <p>Hi, I'm Nikos 👋</p>
+          <SectionTitle>About</SectionTitle>
+          <div className="max-w-[65ch] space-y-5 text-base leading-[170%] text-foreground-muted">
             <p>
-              I'm a Product Engineer, Growth Advisor, and Fractional CTO based in Athens. I
-              co-founded{' '}
-              <a
-                href="https://www.astrocode.tech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Astrocode
-              </a>{' '}
-              and angel invest in early-stage AI startups like{' '}
-              <a
-                href="https://dikaio.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Dikaio.ai
-              </a>
-              .
-            </p>
-            <p>
-              Over the past decade, I've worked across banking, consulting, and startups —
-              enterprise at EY and Fiserv, core product at Workable, Uizard from the sixth engineer
-              until Miro acquired us, and along the way with{' '}
-              <a
-                href="https://www.perspective.co/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Perspective
-              </a>
-              ,{' '}
-              <a
-                href="https://www.futurae.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Futurae
-              </a>
-              ,{' '}
-              <a
-                href="https://www.multiplierholdings.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Multiplier Holdings
-              </a>{' '}
-              as AI Tech Advisor,{' '}
-              <a
-                href="https://dikaio.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Dikaio.ai
-              </a>
-              , and{' '}
-              <a
-                href="https://materiatechnica.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                Materia Labs
-              </a>
-              , where I led{' '}
-              <a
-                href="https://materiatechnica.com/en/instapharm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground font-medium hover:text-accent transition-colors duration-200"
-              >
-                InstaPharm
-              </a>
-              .
-            </p>
-            <p>
-              I advise startups (seed to Series B) on product, engineering, and growth, and work
-              hands-on as a Fractional CTO when teams need someone in the trenches.
+              Over the past decade I've worked across banking, consulting, and startups — enterprise
+              at EY and Fiserv, core product at Workable, and Uizard from the sixth engineer until
+              Miro acquired us. Today I advise startups (seed to Series B) on product, engineering,
+              and growth, and work hands-on as a Fractional CTO when teams need someone in the
+              trenches.
             </p>
             <p>
               Drop me a line to chat about building AI products, growth experimentation, scaling
@@ -180,32 +123,8 @@ function Home() {
         </section>
       </FadeIn>
 
-      <FadeIn delay={0.6}>
-        <section className="mb-14">
-          <SectionTitle>Elsewhere</SectionTitle>
-          <div className="flex gap-6 text-base font-medium">
-            {social.map((item) => (
-              <a
-                key={item.label}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors duration-200"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn delay={0.7}>
-        <footer className="pt-12 border-t border-border flex items-center gap-3">
-          <img src="/favicon.svg" alt="NB" className="w-6 h-6 shrink-0" />
-          <p className="text-sm text-foreground-muted">
-            &copy; {new Date().getFullYear()} Nikos Benakis
-          </p>
-        </footer>
+      <FadeIn onScroll>
+        <SiteFooter />
       </FadeIn>
     </main>
   )
@@ -213,38 +132,28 @@ function Home() {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-sm font-semibold tracking-widest uppercase text-foreground-muted mb-6">
+    <h2 className="text-xs font-semibold tracking-widest uppercase text-foreground-muted mb-6">
       {children}
     </h2>
   )
 }
 
-const portfolio = [{ name: 'Dikaio.ai', logo: '/logos/dikaio.svg' }]
-
-const initiatives = [{ name: 'Astrocode', logo: '/logos/astrocode.png' }]
-
-const education = [
-  { name: 'University of West Attica', logo: '/logos/uniwa.png' },
-  { name: 'University of Piraeus', logo: '/logos/unipi.png' },
-]
-
 const companies = [
-  { name: 'Materia Labs', logo: '/logos/materia.png' },
-  { name: 'Perspective', logo: '/logos/perspective.png' },
-  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
-  { name: 'Arcjet', logo: '/logos/arcjet.png' },
-  { name: 'Futurae', logo: '/logos/futurae.jpg' },
   { name: 'Miro', logo: '/logos/miro.png' },
   { name: 'Uizard', logo: '/logos/uizard.png' },
   { name: 'Workable', logo: '/logos/workable.png' },
-  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
+  { name: 'Multiplier Holdings', logo: '/logos/multiplier.png' },
+  { name: 'Perspective', logo: '/logos/perspective.png' },
+  { name: 'Futurae', logo: '/logos/futurae.jpg' },
+  { name: 'Arcjet', logo: '/logos/arcjet.png' },
+  { name: 'Materia Labs', logo: '/logos/materia.png' },
   { name: 'EY', logo: '/logos/ey.png' },
+  { name: 'Fiserv', logo: '/logos/fiserv.svg' },
   { name: 'Netcompany', logo: '/logos/netcompany.png' },
   { name: 'Shell', logo: '/logos/shell.png' },
 ]
 
-const social = [
-  { label: 'GitHub', url: 'https://github.com/NickolasBenakis' },
-  { label: 'X', url: 'https://x.com/nickolasbenakis' },
-  { label: 'Email', url: 'mailto:nickolasbenele@gmail.com' },
+const ventures = [
+  { name: 'Astrocode', role: 'Co-founder', url: 'https://www.astrocode.tech/' },
+  { name: 'Dikaio.ai', role: 'Angel investor', url: 'https://dikaio.ai' },
 ]

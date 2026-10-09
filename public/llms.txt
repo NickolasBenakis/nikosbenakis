@@ -12,6 +12,7 @@
 
 - [Website](https://www.nikosbenakis.com/)
 - [About / full story](https://www.nikosbenakis.com/about)
+- [Full profile in Markdown](https://www.nikosbenakis.com/llms-full.txt)
 - [GitHub](https://github.com/NickolasBenakis)
 - [X](https://x.com/nickolasbenakis)
 - [Astrocode](https://www.astrocode.tech/)
