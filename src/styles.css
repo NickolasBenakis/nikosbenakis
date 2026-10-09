@@ -69,35 +69,6 @@
   animation: fade-up 1s var(--ease-out-expo) both;
 }
 
-/* Portrait: curtain reveal from the bottom while the image settles */
-/* Negative side insets leave room for the drop shadow; corners come from overflow + radius */
-@keyframes curtain {
-  from {
-    clip-path: inset(100% -15% -15% -15%);
-  }
-  to {
-    clip-path: inset(-15% -15% -15% -15%);
-  }
-}
-
-@keyframes settle {
-  from {
-    transform: scale(1.12);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.animate-curtain {
-  animation: curtain 1.3s var(--ease-out-expo) both;
-}
-
-.animate-curtain img {
-  animation: settle 1.8s var(--ease-out-expo) both;
-  animation-delay: inherit;
-}
-
 /* Below the fold: reveal as the element scrolls in (scroll-driven, no JS).
    Browsers without scroll timelines get a staggered load fade instead. */
 .reveal-on-scroll {

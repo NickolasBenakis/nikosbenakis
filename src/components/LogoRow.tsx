@@ -9,11 +9,11 @@ type Logo = {
  */
 export function LogoRow({ items, delay = 0 }: { items: Array<Logo>; delay?: number }) {
   return (
-    <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-10 sm:gap-y-12">
+    <ul className="flex flex-wrap items-center gap-x-10 gap-y-6 sm:gap-x-12">
       {items.map((item, i) => (
         <li
           key={item.name}
-          className="animate-fadeIn flex items-center justify-center h-12"
+          className="animate-fadeIn flex items-center h-8"
           style={{ animationDelay: `${delay + i * 0.05}s` }}
         >
           <img
@@ -22,7 +22,7 @@ export function LogoRow({ items, delay = 0 }: { items: Array<Logo>; delay?: numb
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className="logo max-h-9 lg:max-h-10 max-w-[110px] w-auto object-contain"
+            className="logo max-h-8 max-w-[96px] w-auto object-contain"
           />
           <span className="sr-only">{item.name}</span>
         </li>

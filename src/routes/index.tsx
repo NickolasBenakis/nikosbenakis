@@ -46,7 +46,10 @@ function Home() {
             </FadeIn>
           </div>
           <div className="shrink-0">
-            <div className="animate-curtain inline-block rounded-lg shadow-lg overflow-hidden">
+            <div
+              className="animate-fadeIn inline-block rounded-lg shadow-lg overflow-hidden"
+              style={{ animationDelay: '0.3s' }}
+            >
               <picture>
                 <source srcSet="/profile.webp" type="image/webp" />
                 <img
@@ -63,7 +66,7 @@ function Home() {
         </div>
       </header>
 
-      <section className="mb-20">
+      <section className="mb-16">
         <FadeIn delay={0.7}>
           <SectionTitle>Worked with</SectionTitle>
         </FadeIn>
