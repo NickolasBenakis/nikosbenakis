@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { FadeIn } from '#/components/FadeIn'
 import { SiteFooter } from '#/components/SiteFooter'
+import { SiteHeader } from '#/components/SiteHeader'
 import { TextLink } from '#/components/TextLink'
 import { TextReveal } from '#/components/TextReveal'
+import { WorkWithMe } from '#/components/WorkWithMe'
 import { PERSON_ID, pageHead, SITE_URL, WEBSITE_ID } from '#/lib/seo'
 
 const profilePageJsonLd = {
@@ -41,14 +43,9 @@ export const Route = createFileRoute('/about')({
 function About() {
   return (
     <main className="min-h-screen px-8 py-16 lg:px-24 lg:py-20 max-w-6xl mx-auto">
+      <SiteHeader />
       <header className="mb-14">
-        <Link
-          to="/"
-          className="text-base text-foreground-muted hover:text-foreground transition-colors duration-200"
-        >
-          ← Nikos Benakis
-        </Link>
-        <h1 className="mt-10 text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25]">
+        <h1 className="text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25]">
           <TextReveal text="My story" />
         </h1>
       </header>
@@ -93,6 +90,9 @@ function About() {
               thousands of recruiters use every day. That's where I got what it means to really care
               about a product, to fight for the details that users actually notice.
             </p>
+            <CaseStudyLink slug="workable-ats">
+              Case study: rebuilding the core ATS at Workable
+            </CaseStudyLink>
           </section>
         </FadeIn>
 
@@ -112,6 +112,9 @@ function About() {
               acquired by <TextLink href="https://miro.com/">Miro</TextLink>. Hard to summarize.
               Worth every bit of it.
             </p>
+            <CaseStudyLink slug="uizard-autodesigner">
+              Case study: shipping Autodesigner at Uizard
+            </CaseStudyLink>
           </section>
         </FadeIn>
 
@@ -148,6 +151,9 @@ function About() {
               <TextLink href="https://dikaio.ai">Dikaio.ai</TextLink> is one I'm particularly
               excited about.
             </p>
+            <CaseStudyLink slug="materia-labs-instapharm">
+              Case study: leading InstaPharm at Materia Labs
+            </CaseStudyLink>
           </section>
         </FadeIn>
 
@@ -194,12 +200,34 @@ function About() {
         </FadeIn>
       </div>
 
+      <div className="mt-16">
+        <WorkWithMe />
+      </div>
+
       <FadeIn onScroll>
-        <div className="mt-16">
+        <div>
           <SiteFooter />
         </div>
       </FadeIn>
     </main>
+  )
+}
+
+function CaseStudyLink({ slug, children }: { slug: string; children: React.ReactNode }) {
+  return (
+    <Link
+      to="/work/$slug"
+      params={{ slug }}
+      className="group mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent"
+    >
+      {children}
+      <span
+        aria-hidden="true"
+        className="transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-1"
+      >
+        →
+      </span>
+    </Link>
   )
 }
 

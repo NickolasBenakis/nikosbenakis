@@ -28,3 +28,50 @@ export function pageHead({ title, description, path }: PageMetaOptions) {
     links: [{ rel: 'canonical', href: url }],
   }
 }
+
+/** BreadcrumbList for nested pages, e.g. [['Work', '/work'], ['Uizard', '/work/uizard']] */
+export function breadcrumbJsonLd(trail: Array<[name: string, path: string]>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [['Home', '/'] as const, ...trail].map(([name, path], i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name,
+      item: new URL(path, SITE_URL).href,
+    })),
+  }
+}
+
+type ArticleOptions = {
+  headline: string
+  description: string
+  path: string
+  published: string
+  about?: { name: string; url: string }
+}
+
+export function articleJsonLd({ headline, description, path, published, about }: ArticleOptions) {
+  const url = new URL(path, SITE_URL).href
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline,
+    description,
+    url,
+    mainEntityOfPage: url,
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'en',
+    image: `${SITE_URL}og.png`,
+    author: { '@id': PERSON_ID },
+    publisher: { '@id': PERSON_ID },
+    isPartOf: { '@id': WEBSITE_ID },
+    ...(about && { about: { '@type': 'Organization', name: about.name, url: about.url } }),
+  }
+}
+
+export function jsonLdScript(data: object) {
+  return { type: 'application/ld+json', children: JSON.stringify(data) }
+}
