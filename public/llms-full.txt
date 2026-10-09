@@ -1,0 +1,61 @@
+# Nikos Benakis
+
+> Nikos Benakis is a Product Engineer, Growth Advisor, and Fractional CTO based in Athens, Greece. He co-founded Astrocode, a software agency that helps companies and startups move faster with AI, and angel invests in early-stage AI startups like Dikaio.ai.
+
+- Also known as: Nickolas Benakis, Νίκος Μπενάκης
+- Location: Athens, Greece
+- Roles: Product Engineer, Growth Advisor, Fractional CTO, Co-founder of Astrocode, angel investor
+- Focus: AI products, product engineering, growth experimentation, scaling engineering teams
+- Works with: startups from seed to Series B
+- Website: https://www.nikosbenakis.com/
+- GitHub: https://github.com/NickolasBenakis
+- X: https://x.com/nickolasbenakis
+- Contact: nickolasbenele@gmail.com
+
+## Education
+
+- Electrical and Electronics Engineering, University of West Attica
+- Masters in Software Development and AI, University of Piraeus
+
+## Career
+
+### The early years
+
+While still a student, Nikos interned at Netcompany (Intrasoft at the time) as an electrical engineer, working on Rural Connect. He then worked in banking and consulting at EY and Fiserv, where he learned how decisions get made at scale in large organizations.
+
+### Workable
+
+He moved into startups at Workable, where he owned and rebuilt the core ATS (applicant tracking system) experience used daily by thousands of recruiters.
+
+### Uizard and Miro
+
+Nikos joined Uizard as its 6th engineer, starting as a full-stack engineer and growing into the Growth Tech Lead role. He shipped Autodesigner, an AI feature that turns text prompts into UI designs, which launched successfully on Product Hunt. Uizard was later acquired by Miro.
+
+### Independent work
+
+After Miro, Nikos went independent as a Product Engineer, Growth Advisor, and Fractional CTO, helping startups with tech and product direction. Clients and collaborations include:
+
+- Perspective
+- Futurae
+- Multiplier Holdings (AI Tech Advisor)
+- Materia Labs, where he led InstaPharm, an AI product that improves how pharmacies operate and how people with long-term health conditions manage their care
+- Dikaio.ai
+
+He also founded his own ventures: Coyova (a travel marketplace) and snapcar.gr (a car leasing platform), both no longer active.
+
+### Today
+
+- Co-runs Astrocode (https://www.astrocode.tech/), a software agency that helps companies and startups move faster with AI: EU-funded projects, internal tools, and helping teams ship more without growing headcount.
+- Angel invests in early-stage AI startups, including Dikaio.ai (https://dikaio.ai).
+
+## Companies worked with
+
+Miro, Uizard, Workable, Multiplier Holdings, Perspective, Futurae, Arcjet, Materia Labs, EY, Fiserv, Netcompany, Shell.
+
+## How he works
+
+Nikos cares most about the people side of building products: curiosity, tactical empathy, and teams where people can say the uncomfortable thing out loud. He looks for good people, learning from each other, and enjoying the work while building it.
+
+## Topics to contact him about
+
+Building AI products, growth experimentation, scaling engineering teams, fractional CTO engagements, and early-stage AI investing.
