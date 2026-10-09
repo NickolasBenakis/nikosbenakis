@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { FadeIn } from '#/components/FadeIn'
 import { SiteFooter } from '#/components/SiteFooter'
 import { TextLink } from '#/components/TextLink'
+import { TextReveal } from '#/components/TextReveal'
 import { PERSON_ID, pageHead, SITE_URL, WEBSITE_ID } from '#/lib/seo'
 
 const profilePageJsonLd = {
@@ -48,14 +49,14 @@ function About() {
           ← Nikos Benakis
         </Link>
         <h1 className="mt-10 text-3xl sm:text-4xl font-medium tracking-[-0.04em] leading-[1.25]">
-          My story
+          <TextReveal text="My story" />
         </h1>
       </header>
 
       <hr className="border-border mb-12" />
 
       <div className="max-w-[65ch] space-y-14">
-        <FadeIn delay={0.2}>
+        <FadeIn delay={0.25}>
           <section>
             <ChapterTitle number="01">The early years</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
@@ -95,7 +96,7 @@ function About() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.4}>
+        <FadeIn onScroll>
           <section>
             <ChapterTitle number="03">The startup ride</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
@@ -114,7 +115,7 @@ function About() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.5}>
+        <FadeIn onScroll>
           <section>
             <ChapterTitle number="04">Going independent</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
@@ -150,7 +151,7 @@ function About() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.6}>
+        <FadeIn onScroll>
           <section>
             <ChapterTitle number="05">What keeps me going</ChapterTitle>
             <p className="text-base leading-[170%] text-foreground-muted">
@@ -193,7 +194,7 @@ function About() {
         </FadeIn>
       </div>
 
-      <FadeIn delay={0.7}>
+      <FadeIn onScroll>
         <div className="mt-16">
           <SiteFooter />
         </div>
