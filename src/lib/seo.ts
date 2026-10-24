@@ -72,6 +72,49 @@ export function articleJsonLd({ headline, description, path, published, about }:
   }
 }
 
+type ProductOptions = {
+  name: string
+  description: string
+  path: string
+  image: string
+  price: number
+  currency: string
+  /** Offer is only advertised once the product can actually be bought */
+  checkoutUrl: string
+}
+
+export function productJsonLd({
+  name,
+  description,
+  path,
+  image,
+  price,
+  currency,
+  checkoutUrl,
+}: ProductOptions) {
+  const url = new URL(path, SITE_URL).href
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `${url}#product`,
+    name,
+    description,
+    url,
+    image: new URL(image, SITE_URL).href,
+    brand: { '@id': PERSON_ID },
+    ...(checkoutUrl && {
+      offers: {
+        '@type': 'Offer',
+        price: price.toFixed(2),
+        priceCurrency: currency,
+        availability: 'https://schema.org/InStock',
+        url: checkoutUrl,
+        seller: { '@id': PERSON_ID },
+      },
+    }),
+  }
+}
+
 export function jsonLdScript(data: object) {
   return { type: 'application/ld+json', children: JSON.stringify(data) }
 }
