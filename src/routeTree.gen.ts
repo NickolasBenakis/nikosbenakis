@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as StoreIndexRouteImport } from './routes/store/index'
+import { Route as StoreSlugRouteImport } from './routes/store/$slug'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as WorkSlugRouteImport } from './routes/work/$slug'
 import { Route as WritingIndexRouteImport } from './routes/writing/index'
@@ -24,6 +26,16 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoreIndexRoute = StoreIndexRouteImport.update({
+  id: '/store/',
+  path: '/store/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoreSlugRoute = StoreSlugRouteImport.update({
+  id: '/store/$slug',
+  path: '/store/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkIndexRoute = WorkIndexRouteImport.update({
@@ -50,16 +62,20 @@ const WritingSlugRoute = WritingSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/store/$slug': typeof StoreSlugRoute
   '/work/$slug': typeof WorkSlugRoute
   '/writing/$slug': typeof WritingSlugRoute
+  '/store/': typeof StoreIndexRoute
   '/work/': typeof WorkIndexRoute
   '/writing/': typeof WritingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/store/$slug': typeof StoreSlugRoute
   '/work/$slug': typeof WorkSlugRoute
   '/writing/$slug': typeof WritingSlugRoute
+  '/store': typeof StoreIndexRoute
   '/work': typeof WorkIndexRoute
   '/writing': typeof WritingIndexRoute
 }
@@ -67,23 +83,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/store/$slug': typeof StoreSlugRoute
   '/work/$slug': typeof WorkSlugRoute
   '/writing/$slug': typeof WritingSlugRoute
+  '/store/': typeof StoreIndexRoute
   '/work/': typeof WorkIndexRoute
   '/writing/': typeof WritingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/work/$slug' | '/writing/$slug' | '/work/' | '/writing/'
+    | '/'
+    | '/about'
+    | '/store/$slug'
+    | '/work/$slug'
+    | '/writing/$slug'
+    | '/store/'
+    | '/work/'
+    | '/writing/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/work/$slug' | '/writing/$slug' | '/work' | '/writing'
+  to:
+    | '/'
+    | '/about'
+    | '/store/$slug'
+    | '/work/$slug'
+    | '/writing/$slug'
+    | '/store'
+    | '/work'
+    | '/writing'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/store/$slug'
     | '/work/$slug'
     | '/writing/$slug'
+    | '/store/'
     | '/work/'
     | '/writing/'
   fileRoutesById: FileRoutesById
@@ -91,8 +126,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  StoreSlugRoute: typeof StoreSlugRoute
   WorkSlugRoute: typeof WorkSlugRoute
   WritingSlugRoute: typeof WritingSlugRoute
+  StoreIndexRoute: typeof StoreIndexRoute
   WorkIndexRoute: typeof WorkIndexRoute
   WritingIndexRoute: typeof WritingIndexRoute
 }
@@ -111,6 +148,20 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/store/': {
+      id: '/store/'
+      path: '/store'
+      fullPath: '/store/'
+      preLoaderRoute: typeof StoreIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/store/$slug': {
+      id: '/store/$slug'
+      path: '/store/$slug'
+      fullPath: '/store/$slug'
+      preLoaderRoute: typeof StoreSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/': {
@@ -147,8 +198,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  StoreSlugRoute: StoreSlugRoute,
   WorkSlugRoute: WorkSlugRoute,
   WritingSlugRoute: WritingSlugRoute,
+  StoreIndexRoute: StoreIndexRoute,
   WorkIndexRoute: WorkIndexRoute,
   WritingIndexRoute: WritingIndexRoute,
 }

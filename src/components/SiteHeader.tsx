@@ -17,6 +17,9 @@ export function SiteHeader() {
         <Link to="/writing" className={linkClass}>
           Writing
         </Link>
+        <Link to="/store" className={linkClass}>
+          Store
+        </Link>
         <Link to="/about" className={linkClass}>
           About
         </Link>

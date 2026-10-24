@@ -14,6 +14,11 @@
 - [Leading InstaPharm at Materia Labs](https://www.nikosbenakis.com/work/materia-labs-instapharm): an AI product improving how pharmacies operate and how people with long-term conditions manage their care.
 - [Rebuilding the core ATS at Workable](https://www.nikosbenakis.com/work/workable-ats): owned and rebuilt the applicant tracking experience used daily by thousands of recruiters.
 
+## Store
+
+- [Emberleaf](https://www.nikosbenakis.com/store/emberleaf): an original woodcut-style guardian in golden fire — 24 wallpapers in 4 colorways plus live wallpapers.
+- [Ember Aurora](https://www.nikosbenakis.com/store/ember-aurora): original abstract wallpapers — 24 wallpapers in 4 colorways for iPhone, Android, Mac, Windows and ultrawide, plus live wallpapers.
+
 ## Services
 
 - Fractional CTO for seed to Series B startups
@@ -26,6 +31,7 @@
 - [About / full story](https://www.nikosbenakis.com/about)
 - [Selected work](https://www.nikosbenakis.com/work)
 - [Writing](https://www.nikosbenakis.com/writing)
+- [Store](https://www.nikosbenakis.com/store)
 - [Full profile in Markdown](https://www.nikosbenakis.com/llms-full.txt)
 - [GitHub](https://github.com/NickolasBenakis)
 - [X](https://x.com/nickolasbenakis)
