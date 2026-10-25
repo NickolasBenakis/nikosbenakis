@@ -74,6 +74,28 @@ const packFaq: Product['faq'] = [
 
 export const products: Array<Product> = [
   {
+    slug: 'frostleaf',
+    title: 'Frostleaf',
+    tagline: 'A snow-spotted guardian wading through white fire and a storm of teal leaves.',
+    kind: 'Live wallpaper set',
+    summary:
+      'The icy sibling of Emberleaf: a pale, leopard-spotted guardian with a white mane, teal leaves and cold white flames — 24 wallpapers in 4 colorways for every screen, plus live wallpapers.',
+    description: [
+      'Frostleaf is Emberleaf’s winter twin, drawn in the same woodcut style: a pale guardian with dark snow-leopard rosettes and a flowing white mane, crossing a field of cold, white-blue fire beneath a canopy of teal leaves.',
+      'In the live versions the frost-fire licks upward and the mane and leaves drift around the guardian, who stays perfectly still. Four colorways — including Bloom, where the leaves turn crimson and the guardian glows copper-gold.',
+    ],
+    price: 1.99,
+    currency: 'USD',
+    checkoutUrl: '',
+    contents: packContents,
+    facts: packFacts,
+    setup: packSetup,
+    faq: packFaq,
+    colorways: colorways('frostleaf', ['Original', 'Tide', 'Bloom', 'Ash']),
+    cover: preview('frostleaf', 'cover.webp'),
+    published: '2026-10-25',
+  },
+  {
     slug: 'emberleaf',
     title: 'Emberleaf',
     tagline: 'A gold-veined guardian wrapped in living leaves, rising out of golden fire.',
