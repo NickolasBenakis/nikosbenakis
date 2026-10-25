@@ -82,7 +82,7 @@ export const products: Array<Product> = [
       'The icy sibling of Emberleaf: a pale, leopard-spotted guardian with a white mane, teal leaves and cold white flames — 24 wallpapers in 4 colorways for every screen, plus live wallpapers.',
     description: [
       'Frostleaf is Emberleaf’s winter twin, drawn in the same woodcut style: a pale guardian with dark snow-leopard rosettes and a flowing white mane, crossing a field of cold, white-blue fire beneath a canopy of teal leaves.',
-      'In the live versions the frost-fire licks upward and the mane and leaves drift around the guardian, who stays perfectly still. Four colorways — including Bloom, where the leaves turn crimson and the guardian glows copper-gold.',
+      'In the live versions a cold silver sheen glides across its fur while the white flames rise slowly beneath it, and the guardian stays perfectly still. Four colorways — including Bloom, where the leaves turn crimson and the guardian glows copper-gold.',
     ],
     price: 1.99,
     currency: 'USD',
@@ -104,7 +104,7 @@ export const products: Array<Product> = [
       'An original woodcut-style guardian with gold-veined skin, a mane of green leaves and a field of golden fire: 24 wallpapers in 4 colorways for every screen, plus live wallpapers.',
     description: [
       'Emberleaf is an original creature drawn like an old woodcut print: a dark serpentine guardian whose skin is cracked with veins of gold, crowned by a glowing crystal and a mane of countless leaves, wading through a sea of golden flame.',
-      'In the live versions the fire flickers and climbs while the leaves sway around the guardian, who stays perfectly still. Four colorways — including Bloom, where the leaves turn magenta and the fire burns blue.',
+      'In the live versions a slow glint of light travels along the gold veins, the crystal on its brow breathes and the flames rise, while the guardian stays perfectly still. Four colorways — including Bloom, where the leaves turn magenta and the fire burns blue.',
     ],
     price: 1.99,
     currency: 'USD',
@@ -126,7 +126,7 @@ export const products: Array<Product> = [
       'Flowing ribbons of ember light over a violet night: 24 wallpapers in 4 colorways for iPhone, Android, Mac, Windows and ultrawide, plus live wallpapers.',
     description: [
       'Ember Aurora is an original abstract series: rivers of warm light drifting through a deep violet haze, with embers rising off the brightest lines. Calm enough for a home screen, striking on a lock screen.',
-      'Every wallpaper comes in four colorways and is cut for each screen rather than stretched, so it stays sharp from a phone to a 6K display. The live versions loop seamlessly.',
+      'Every wallpaper comes in four colorways and is cut for each screen rather than stretched, so it stays sharp from a phone to a 6K display. In the live versions, light travels slowly along the ribbons while the violet haze breathes — a calm, seamless loop.',
     ],
     price: 1.99,
     currency: 'USD',
