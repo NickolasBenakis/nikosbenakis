@@ -68,7 +68,7 @@ const packFaq: Product['faq'] = [
   },
   {
     q: 'Can I share or resell the files?',
-    a: 'Please don’t — the license is personal. Point friends here instead; it’s less than a coffee.',
+    a: 'Please don’t — the license is personal. Point friends to this page instead.',
   },
 ]
 
@@ -128,7 +128,7 @@ export const products: Array<Product> = [
       'Ember Aurora is an original abstract series: rivers of warm light drifting through a deep violet haze, with embers rising off the brightest lines. Calm enough for a home screen, striking on a lock screen.',
       'Every wallpaper comes in four colorways and is cut for each screen rather than stretched, so it stays sharp from a phone to a 6K display. In the live versions, light travels slowly along the ribbons while the violet haze breathes — a calm, seamless loop.',
     ],
-    price: 1.99,
+    price: 0,
     currency: 'USD',
     checkoutUrl: '',
     contents: packContents,
@@ -146,6 +146,7 @@ export function getProduct(slug: string) {
 }
 
 export function formatPrice(product: Product) {
+  if (product.price === 0) return 'Free'
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: product.currency,
