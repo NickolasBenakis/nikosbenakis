@@ -193,18 +193,21 @@ function ProductPage() {
 }
 
 function BuyBox({ product }: { product: Product }) {
+  const free = product.price === 0
   return (
     <div className="rounded-xl border border-border bg-white/60 p-6">
       <p className="flex items-baseline gap-2">
         <span className="text-4xl font-medium tracking-tight">{formatPrice(product)}</span>
-        <span className="text-sm text-foreground-muted">one-time · yours to keep</span>
+        <span className="text-sm text-foreground-muted">
+          {free ? 'no card needed' : 'one-time · yours to keep'}
+        </span>
       </p>
       {product.checkoutUrl ? (
         <a
           href={product.checkoutUrl}
           className="mt-5 flex w-full items-center justify-center rounded-lg bg-foreground px-5 py-3 text-base font-medium text-surface transition-opacity duration-200 hover:opacity-85"
         >
-          Get {product.title}
+          {free ? 'Download free' : `Get ${product.title}`}
         </a>
       ) : (
         <span
